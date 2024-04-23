@@ -30,7 +30,6 @@
             <artifactId>selenium-java</artifactId>
             <version>4.19.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -47,7 +46,11 @@
             <version>7.10.1</version>
             <scope>compile</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.12.132</version> <!-- Use the latest version -->
+        </dependency>
        </dependencies>
 
 </project>

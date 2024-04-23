@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.naukri.Utility.AWSmanager;
 import org.naukri.Utility.Base;
 import org.naukri.pages.LoginPage;
 import org.naukri.pages.HomePage;
@@ -43,6 +44,8 @@ public class ProfilePageSteps extends Base {
 
     @And("user uploads cv")
     public void userUploadsCv() throws Exception {
+        AWSmanager awSmanager=new AWSmanager();
+        awSmanager.getFile();
         profilePage.uploadCV(driver);
     }
 

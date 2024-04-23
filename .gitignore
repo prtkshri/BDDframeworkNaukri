@@ -2,7 +2,7 @@
 *.class
 
 #properties
-global.properties
+#global.properties
 
 # Log file
 *.log
