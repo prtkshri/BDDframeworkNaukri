@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/features",
-        glue = "steps"
-
+        glue = "steps",
+        plugin = {"pretty", "html:target/cucumber-reports"} // Add ExtentReports plugin here
 )
 
 public class TestRunner {

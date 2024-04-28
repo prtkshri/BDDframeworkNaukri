@@ -6,23 +6,26 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.naukri.Utility.AWSmanager;
 import org.naukri.Utility.Base;
-import org.naukri.pages.LoginPage;
+import org.naukri.Utility.DriverManager;
+import org.naukri.Utility.VaultReader;
 import org.naukri.pages.HomePage;
+import org.naukri.pages.LoginPage;
 import org.naukri.pages.ProfilePage;
 import org.openqa.selenium.WebDriver;
-import org.naukri.Utility.DriverManager;
+import org.testng.Assert;
 
 
 public class ProfilePageSteps extends Base {
     DriverManager manager = new DriverManager();
     WebDriver driver;
     String url = getProperty("url");
+    String browser=getProperty("browser");
     LoginPage loginPage=new LoginPage(driver);
     HomePage homePage=new HomePage(driver);
     ProfilePage profilePage=new ProfilePage(driver);
 
     public ProfilePageSteps() throws Exception {
-        this.driver = manager.initializeDriver();
+        this.driver = manager.initializeDriver(browser);
     }
 
 
@@ -53,7 +56,9 @@ public class ProfilePageSteps extends Base {
     @Then("Verify {string} message is displayed")
     public void verifyMessageIsDisplayed(String message) {
         String SuccessText = profilePage.validateSuccessMessage(driver);
-        org.testng.Assert.assertEquals(message, SuccessText);
+        Assert.assertEquals(message, SuccessText);
         manager.tearDown();
     }
+
+
 }

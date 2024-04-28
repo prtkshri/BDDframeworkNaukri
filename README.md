@@ -29,3 +29,12 @@ POM.xml - heart of project - contains all the dependencies required by the proje
 
 NOTE1 = Runner file is mapped for parallel testing so use it as required.
 
+# Run tests
+    mvn clean test 
+    -Ddriver=chrome
+    -Dglobal.username="username"
+    -Dglobal.password="password
+
+# Maven params
+    driver: chrome or firefox
+

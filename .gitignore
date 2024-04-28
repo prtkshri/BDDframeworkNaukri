@@ -1,8 +1,9 @@
 # Compiled class file
 *.class
+target
 
 #properties
-#global.properties
+global.properties
 
 # Log file
 *.log

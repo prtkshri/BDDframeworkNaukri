@@ -42,7 +42,7 @@ public class AWSmanager extends Base {
             S3ObjectInputStream inputStream = s3Object.getObjectContent();
             FileOutputStream outputStream = null;
             String dir = System.getProperty("user.dir");
-            outputStream = new FileOutputStream(new File(dir + "/src/test/resources/downloaded_file.pdf"));
+            outputStream = new FileOutputStream(new File(dir + "/src/test/resources/prateek_shrivastava.pdf"));
 
 
             byte[] buffer = new byte[1024];
